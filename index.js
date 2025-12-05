@@ -19,31 +19,6 @@
 //}
 
 // think I am barking up the wrong tree
-// take the first element in arr1
-// check if it does not exist in arr2
-// add it to new array
-//
-
-// think I am barking up the wrong tree
-// put both arrays into one array
-// add to a set
-// return array of set
-
-// function difference(arr1, arr2) {
-// console.log("Start with: ",arr1, arr2)
-// create a set
-// const set = new Set();
-// spread both arrays;
-// const both = [...arr1, ...arr2];
-// console.log("Spread both: ",both)
-// set.add(both);
-// console.log("Set for unique elements: ", set)
-// const resultArr = Array.from(set)
-// console.log(resultArr)
-//  return arr1;
-//}
-
-// think I am barking up the wrong tree
 // put both arrays into one array
 // add to a set
 // return array of set
@@ -51,22 +26,23 @@
 
 // so if element is present in both arrays, remove it from both arrays
 
-function difference(arr1, arr2) {
-  console.log('Starting with: ', arr1, arr2);
-  arr1.forEach((x, i) => {
-    if (arr2.includes(x)) {
-      console.log(x, i);
-      arr1.splice(i, 1);
-      arr2.splice(arr2.indexOf(x), 1);
-    }
-  });
-  const result = [...arr1, ...arr2];
-  console.log(arr1, arr2);
-  console.log(result);
-  return result;
-}
+// function difference(arr1, arr2) {
+//   console.log("Starting with: ", arr1, arr2)
+//   arr1.forEach((x, i) => {
+//     if(arr2.includes(x)) {
+//      console.log(x, i)
+//      arr1.splice(i, 1)
+//      arr2.splice(arr2.indexOf(x), 1)
+//      console.log(arr2.indexOf(x))
+//    }
+//  })
+//  const result = [...arr1, ...arr2]
+//  console.log(arr1, arr2)
+//  console.log(result)
+//  return result
+// }
 
-difference([1, 'a', 2], [2, 'b', 'a']);
+// difference([1, "a", 2], [2, "b", "a"])
 
 // The splice() method adds and/or removes array elements.
 // The splice() method overwrites the original array.
@@ -106,3 +82,21 @@ difference([1, 'a', 2], [2, 'b', 'a']);
 // The indexOf() method starts at a specified index and searches from left to right (from the given start postion to the end of the array).
 // By default the search starts at the first element and ends at the last.
 // Negative start values counts from the last element (but still searches from left to right).
+
+function difference(arr1, arr2) {
+  console.log('Starting with: ', arr1, arr2);
+  arr1.forEach((x, i) => {
+    while (arr2.includes(x)) {
+      console.log('Showing a duplicate: ', x, 'at index: ', i);
+      arr1.splice(i, 1);
+      arr2.splice(arr2.indexOf(x), 1);
+      console.log(arr2.indexOf(x), 1);
+    }
+  });
+  const result = [...arr1, ...arr2];
+  console.log(arr1, arr2);
+  console.log(result);
+  return result;
+}
+
+difference([1, 'a', 2], [2, 'b', 'a']);
