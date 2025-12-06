@@ -161,3 +161,49 @@ function difference(arr1, arr2) {
 
 difference([1, 'a', 2], [2, 'b', 'a']);
 // array.splice(index, count, item1, ....., itemX)
+
+// step by step
+//// loop through arr1
+////// loop through arr2
+//////// check arr1[0] === arr2[0]
+////////// if match ??
+//////////// check if object already contains arr1[0] as key
+//////////// if yes object.key( arr1[0] );
+//////////// {arr1[0]: value++}
+//////////// otherwise
+//////////// push to arr1[0] to object;
+//////////// {arr1[0]: 1}
+//////// check arr1[0] === arr2[1]
+////////// if match ??
+//////////// check if object already contains arr1[0] as key
+//////////// if yes object.key( arr1[0] );
+//////////// {arr1[0]: value++}
+//////////// otherwise
+//////////// push to arr1[0] to object;
+//////////// {arr1[0]: 1}
+//////// check arr1[0] === arr2[3]
+////////// if match ??
+//////////// check if object already contains arr1[0] as key
+//////////// if yes object.key( arr1[0] );
+//////////// {arr1[0]: value++}
+//////////// otherwise
+//////////// push to arr1[0] to object;
+//////////// {arr1[0]: 1}
+//////// check arr1[0] === arr2[4]
+////////// if match ??
+//////////// check if object already contains arr1[0] as key
+//////////// if yes object.key( arr1[0] );
+//////////// {arr1[0]: value++}
+//////////// otherwise
+//////////// push to arr1[0] to object;
+//////////// {arr1[0]: 1}
+//////// repeat for all permutations
+////////
+////// console.log(object)
+////// run through the object
+////// check the object for values > 1
+////// if (values > 1)
+//////// remove key: value pair from the object
+////// console.log(object)
+//// turn object to array
+// return array
