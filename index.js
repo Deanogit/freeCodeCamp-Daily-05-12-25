@@ -126,12 +126,13 @@
 //
 
 function difference(arr1, arr2) {
-  arr1.forEach((x) => {
-    arr2.forEach((i) => {
-      console.log('testing', x, i);
-      if (i == x) {
-        console.log('Match!');
-      }
+  arr1.forEach((x, i) => {
+    arr2.forEach((y, ind) => {
+      // if (y == x) {
+      //   console.log("Match!", arr1[i], arr2[ind])
+
+      // }
+      console.log('testing', x, i, y, ind);
     });
   });
 }
