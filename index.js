@@ -118,6 +118,8 @@
 // difference([1, "a", 2], [2, "b", "a"]) should return [1, "b"].
 // difference([1, 3, 5, 7, 9], [1, 2, 3, 4, 5, 6, 7, 8, 9]) should return [2, 4, 6, 8].
 
+// if arr1[0].includes(arr2[0])
+
 // loop arr1
 // loop arr2
 // if arr2[l].includes(arr1[i])
@@ -126,13 +128,31 @@
 //
 
 function difference(arr1, arr2) {
+  console.log('Starting with: ', arr1, arr2);
+  const result = new Set();
   arr1.forEach((x, i) => {
     arr2.forEach((y, ind) => {
       // if (y == x) {
       //   console.log("Match!", arr1[i], arr2[ind])
 
       // }
-      console.log('testing', x, i, y, ind);
+      console.log('testing: ', x, i, y, ind);
+      if (y !== x) {
+        console.log('Unique! ', x, y);
+        // instead of trying to remove
+        // push to a new array
+        // arr1.splice(i, 1)
+        // arr2.splice(ind, 1)
+        result.add(arr1[x]);
+        result.add(arr2[y]);
+      }
     });
   });
+  // console.log("Returning: ", arr1, arr2)
+  console.log('Returning: ', result);
+  const resultArr = Array.from(result);
+  console.log('Returning result array: ', resultArr);
 }
+
+difference([1, 'a', 2], [2, 'b', 'a']);
+// array.splice(index, count, item1, ....., itemX)
