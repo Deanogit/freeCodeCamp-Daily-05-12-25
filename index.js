@@ -83,25 +83,39 @@
 // By default the search starts at the first element and ends at the last.
 // Negative start values counts from the last element (but still searches from left to right).
 
-function difference(arr1, arr2) {
-  console.log('Starting with: ', arr1, arr2);
-  // this loops once!
-  arr1.forEach((x, i) => {
-    while (arr2.includes(x)) {
-      console.log('Showing a duplicate: ', x, 'at index: ', i);
-      arr1.splice(i, 1);
-      arr2.splice(arr2.indexOf(x), 1);
-      console.log(arr2.indexOf(x), 1);
-    }
-  });
-  const result = [...arr1, ...arr2];
-  console.log(arr1, arr2);
-  console.log(result);
-  return result;
-}
+// function difference(arr1, arr2) {
+//  console.log("Starting with: ", arr1, arr2)
+// this loops once!
+//  arr2.forEach((x, i) => {
+//    if (arr1.includes(x)) {
+//      console.log("Showing a duplicate: ", x,"at index: ",  i)
+//      arr2.splice(i, 1)
+//      console.log("This is the arr1 contains: ", arr1.indexOf(x))
+//      arr2.splice(arr2.indexOf(x), 1)
+//    }
+//  })
+//  const result = [...arr1, ...arr2]
+//  console.log(arr1, arr2)
+//  console.log(result)
+//  return result
+// }
 
-difference([1, 'a', 2], [2, 'b', 'a']);
+// difference([1, "a", 2], [2, "b", "a"])
 
 // check arr2 for matching arr1 elements
 // if match
 // remove from arr1 & arr2
+
+// another way
+// concat arrays
+// loop through
+// if a & b
+// remove a & b
+// how to join back arrays??
+
+// difference([1, 2, 3], [3, 4, 5]) should return [1, 2, 4, 5].
+// difference(["a", "b"], ["c", "b"]) should return ["a", "c"].
+// difference([1, "a", 2], [2, "b", "a"]) should return [1, "b"].
+// difference([1, 3, 5, 7, 9], [1, 2, 3, 4, 5, 6, 7, 8, 9]) should return [2, 4, 6, 8].
+
+// if arr1[0].includes(arr2[0])
