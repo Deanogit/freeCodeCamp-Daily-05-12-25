@@ -129,7 +129,8 @@
 
 function difference(arr1, arr2) {
   console.log('Starting with: ', arr1, arr2);
-  const result = new Set();
+  // const result = new Set();
+  const result = [];
   arr1.forEach((x, i) => {
     arr2.forEach((y, ind) => {
       // if (y == x) {
@@ -143,15 +144,19 @@ function difference(arr1, arr2) {
         // push to a new array
         // arr1.splice(i, 1)
         // arr2.splice(ind, 1)
-        result.add(arr1[x]);
-        result.add(arr2[y]);
+        console.log('Pushing arr1: x');
+        console.log('Pushing arr2: y');
+        result.push(arr1[x]);
+        result.push(arr2[y]);
+      } else {
+        console.log('Match!', x, y);
       }
     });
   });
   // console.log("Returning: ", arr1, arr2)
   console.log('Returning: ', result);
-  const resultArr = Array.from(result);
-  console.log('Returning result array: ', resultArr);
+  // const resultArr = Array.from(result)
+  // console.log("Returning result array: ",resultArr)
 }
 
 difference([1, 'a', 2], [2, 'b', 'a']);
