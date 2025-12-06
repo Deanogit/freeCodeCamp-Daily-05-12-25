@@ -207,3 +207,16 @@ difference([1, 'a', 2], [2, 'b', 'a']);
 ////// console.log(object)
 //// turn object to array
 // return array
+
+// step by step
+//// loop through arr1
+////// loop through arr2
+//////// if key exists in object
+////////// value++
+//////// else
+//////// add key values to object
+////// check object for values > 1
+//////// remove key:value
+////// put keys into an array
+////// sort array? sort object?
+// return array
