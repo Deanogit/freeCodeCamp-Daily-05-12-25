@@ -85,6 +85,7 @@
 
 function difference(arr1, arr2) {
   console.log('Starting with: ', arr1, arr2);
+  // this loops once!
   arr1.forEach((x, i) => {
     while (arr2.includes(x)) {
       console.log('Showing a duplicate: ', x, 'at index: ', i);
@@ -100,3 +101,7 @@ function difference(arr1, arr2) {
 }
 
 difference([1, 'a', 2], [2, 'b', 'a']);
+
+// check arr2 for matching arr1 elements
+// if match
+// remove from arr1 & arr2
