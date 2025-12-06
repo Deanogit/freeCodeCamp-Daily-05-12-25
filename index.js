@@ -118,4 +118,20 @@
 // difference([1, "a", 2], [2, "b", "a"]) should return [1, "b"].
 // difference([1, 3, 5, 7, 9], [1, 2, 3, 4, 5, 6, 7, 8, 9]) should return [2, 4, 6, 8].
 
-// if arr1[0].includes(arr2[0])
+// loop arr1
+// loop arr2
+// if arr2[l].includes(arr1[i])
+// remove arr1[i]
+// remove arr2[l]
+//
+
+function difference(arr1, arr2) {
+  arr1.forEach((x) => {
+    arr2.forEach((i) => {
+      console.log('testing', x, i);
+      if (i == x) {
+        console.log('Match!');
+      }
+    });
+  });
+}
