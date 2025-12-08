@@ -213,14 +213,18 @@ function difference(arr1, arr2) {
   });
   console.log('These are the indexes: ', index1, index2);
   for (let i = 0; i < index1.length; i++) {
-    arr1.splice(index1[i]);
+    console.log(arr1);
+    console.log(index1[i], 1);
+    arr1.splice(index1[i], 1);
   }
   for (let f = 0; f < index2.length; f++) {
-    arr2.splice(index2[f]);
+    console.log(arr2);
+    console.log(index2[f], 1);
+    arr2.splice(index2[f], 1);
   }
   console.log('This is arr1: ', arr1);
   console.log('This is arr2: ', arr2);
 }
 
-// difference([1, 3, 5, 7, 9], [1, 2, 3, 4, 5, 6, 7, 8, 9])
-// difference([1, "a", 2], [2, "b", "a"])
+difference([1, 3, 5, 7, 9], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+difference([1, 'a', 2], [2, 'b', 'a']);
